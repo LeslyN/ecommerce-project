@@ -1,5 +1,6 @@
-import Home from "./Views/Home";
-import './App.css'
+import Home from './views/Home'
+
+import './assets/sass/main.scss'
 
 function App() {
   return (

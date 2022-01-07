@@ -1,0 +1,28 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.menu {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $white;
+  transform: translate3d(-100%, 0, 0);
+  transition: all 0.3s ease-in-out;
+
+  &.open {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &__line {
+    height: 0.5px;
+    background-color: $dark-grayish-blue-3;
+  }
+
+  &-header {
+    padding: 1.875rem $padding-mobile;
+    @include flexbox(row, center, center);
+  }
+}

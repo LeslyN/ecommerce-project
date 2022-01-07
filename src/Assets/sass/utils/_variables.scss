@@ -1,0 +1,41 @@
+/*Primary colors*/
+
+$red: rgb(251, 46, 134);
+$light-red: rgba(251, 46, 134, 12%);
+
+$green: rgb(25, 209, 111);
+$light-green: rgba(236, 247, 237, 12%);
+
+$blue: rgb(47, 26, 196);
+$light-blue: rgb(242, 240, 255);
+$very-light-blue: rgba(249, 250, 254);
+
+/*Neutral*/
+
+$white: rgb(255, 255, 255);
+
+$very-dark-blue: rgb(29, 32, 37);
+$black-opacity: rgba(29, 32, 37, 28%);
+
+$dark-grayish-blue-1: rgb(104, 112, 125);
+$dark-grayish-blue-2: rgba(104, 112, 125, 80%);
+$dark-grayish-blue-3: rgba(104, 112, 125, 50%);
+$dark-grayish-blue-4: rgba(104, 112, 125, 3%);
+
+$padding-mobile: 5vw;
+$max-width-desktop: 1240px;
+
+$breakpoints: (
+  // // 400px
+  // xs: 25em,
+  // // 544px
+  // sm: 34em,
+  // 768px
+  md: 48em,
+  // 960px
+  lg: 60em,
+  // 1280px
+  xl: 80em,
+  // 1440px
+  xxl: 90em
+);

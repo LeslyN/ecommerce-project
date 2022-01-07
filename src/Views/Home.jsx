@@ -1,11 +1,11 @@
-import Sidebar from "../Components/PrimaryComponents/Sidebar/Sidebar";
-import Header from "../Components/PrimaryComponents/Header/Header";
-import Main from '../Components/PrimaryComponents/Main/Main'
+import Sidebar from '../sectionComponents/Sidebar/Sidebar'
+import Header from '../sectionComponents/Header/Header'
+import Main from '../sectionComponents/Main/Main'
 
 function Home() {
-  return(
-    <div className='bg-orange-400'>
-      <Sidebar className='grid grid-cols-3'></Sidebar>
+  return (
+    <div className='home layout'>
+      <Sidebar></Sidebar>
       <Header></Header>
       <Main></Main>
     </div>

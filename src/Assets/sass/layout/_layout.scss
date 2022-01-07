@@ -1,0 +1,37 @@
+@use '../utils/mixins' as *;
+@use '../utils/variables' as *;
+
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header'
+    'main';
+
+  @include query(lg) {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      'sidebar header'
+      'sidebar main';
+  }
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: none;
+  @include query(lg) {
+    display: block;
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  background-color: rgb(248, 248, 148);
+  grid-area: main;
+}
