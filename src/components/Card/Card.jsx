@@ -1,6 +1,13 @@
 function Card() {
-  return(
-    <div></div>
+  return (
+    <div className='card'>
+      <figure>
+        <img src='' alt='' />
+      </figure>
+      <h2>brand</h2>
+      <h3>title</h3>
+      <div></div>
+    </div>
   )
 }
 
