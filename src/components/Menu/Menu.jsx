@@ -7,6 +7,7 @@ function Menu({ open }) {
         <LogoMobile />
       </header>
       <hr className='menu__line' ariaHidden='true' />
+      <div className=''></div>
     </div>
   )
 }
