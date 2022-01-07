@@ -1,6 +1,6 @@
 import Home from './views/Home'
 
-import './assets/sass/main.scss'
+import './Assets/sass/main.scss'
 
 function App() {
   return (
