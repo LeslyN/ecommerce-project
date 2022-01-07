@@ -1,4 +1,4 @@
-import Home from './views/Home'
+import Home from './Views/Home'
 
 import './assets/sass/main.scss'
 
