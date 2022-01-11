@@ -1,40 +1,61 @@
 import { useState } from 'react'
+import { useGetWidth } from '../../hooks/useGetWidth'
 
 import Toggle from '../../components/Toggle/Toggle'
-
 import Like from '../../components/Icons/Like'
 import Logo from '../../components/Icons/LogoMobile'
 import SearchIcon from '../../components/Icons/SearchIcon'
 import Cart from '../../components/Icons/Cart'
 import Menu from '../../components/Menu/Menu'
+import Button from '../../components/Button/Button'
+import Search from '../../components/Search/Search'
 
 function Header() {
-  const [menuOpen, setMenuOpen] = useState(false)
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [menuOpen, setMenuOpen] = useState(false)
+	const breakpointTablet = 960
 
-  const handleToggle = () => {
-    function toggleMenu(prevMenuOpen) {
-      return !prevMenuOpen
-    }
+	console.log(windowWidth)
 
-    setMenuOpen(toggleMenu)
-  }
+	const handleToggle = () => {
+		function toggleMenu(prevMenuOpen) {
+			return !prevMenuOpen
+		}
 
-  return (
-    <>
-      <header className='header'>
-        <div className='header__item' onClick={handleToggle}>
-          <Toggle open={menuOpen} ariaLabel={'menu open'} />
-        </div>
+		setMenuOpen(toggleMenu)
+	}
 
-        <Menu open={menuOpen} />
+	useGetWidth(setWindowWidth)
 
-        <Like />
-        <Logo />
-        <SearchIcon></SearchIcon>
-        <Cart></Cart>
-      </header>
-    </>
-  )
+	return (
+		<>
+			<header className='header'>
+				{windowWidth >= breakpointTablet && <Search />}
+
+				{windowWidth < breakpointTablet && (
+					<Toggle
+						open={menuOpen}
+						ariaLabel={'menu open'}
+						onClick={handleToggle}
+					/>
+				)}
+
+				{windowWidth < breakpointTablet && <Menu open={menuOpen} />}
+
+				{windowWidth < breakpointTablet && <Like />}
+
+				{windowWidth < breakpointTablet && <Logo />}
+
+				{windowWidth < breakpointTablet && <SearchIcon />}
+
+				<Cart tabIndex={0} />
+
+				{windowWidth >= breakpointTablet && (
+					<Button content={'Sign in'} selector={'button--red'} />
+				)}
+			</header>
+		</>
+	)
 }
 
 export default Header

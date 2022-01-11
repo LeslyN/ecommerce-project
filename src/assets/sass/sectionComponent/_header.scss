@@ -1,0 +1,16 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.header {
+	padding: 1.875rem $padding-mobile;
+
+	background-color: $very-light-blue;
+	display: grid;
+	place-content: center;
+	grid-template-columns: auto auto 1fr auto auto;
+	gap: 1.4rem;
+
+	@include query(lg) {
+		grid-template-columns: 1fr auto auto;
+	}
+}
