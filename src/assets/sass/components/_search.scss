@@ -1,24 +1,24 @@
 @use '../utils/variables' as *;
 
 .search-container {
-	align-self: center;
+  align-self: center;
 
-	position: relative;
-	margin-right: auto;
-	background-color: $white;
-	border-radius: $border-radius;
+  position: relative;
+  margin-right: auto;
+  background-color: $white;
+  border-radius: $border-radius;
 
-	&__input {
-		padding: 0.5rem 1rem 0.5rem 3rem;
-		&::placeholder {
-			color: $dark-grayish-blue-2;
-		}
-	}
+  &__input {
+    padding: 0.5rem 1rem 0.5rem 3rem;
+    &::placeholder {
+      color: $dark-grayish-blue-2;
+    }
+  }
 
-	&__icon {
-		position: absolute;
-		left: 1em;
-		top: 50%;
-		transform: translate(0, -50%);
-	}
+  &__icon {
+    position: absolute;
+    left: 1em;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
 }

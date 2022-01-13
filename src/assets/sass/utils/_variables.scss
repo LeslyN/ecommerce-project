@@ -24,19 +24,19 @@ $dark-grayish-blue-4: rgba(104, 112, 125, 3%);
 
 $padding-mobile: 5vw;
 $max-width-desktop: 1240px;
-$border-radius: 0.4rem;
+$border-radius: 6px;
 
 $breakpoints: (
-	// // 400px
-	// xs: 25em,
-	// // 544px
-	// sm: 34em,
-	// 768px
-	md: 48em,
-	// 960px
-	lg: 60em,
-	// 1280px
-	xl: 80em,
-	// 1440px
-	xxl: 90em
+  // // 400px
+  // xs: 25em,
+  // // 544px
+  // sm: 34em,
+  // 768px
+  md: 48em,
+  // 960px
+  lg: 60em,
+  // 1280px
+  xl: 80em,
+  // 1440px
+  xxl: 90em
 );

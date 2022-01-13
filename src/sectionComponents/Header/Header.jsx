@@ -11,51 +11,49 @@ import Button from '../../components/Button/Button'
 import Search from '../../components/Search/Search'
 
 function Header() {
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-	const [menuOpen, setMenuOpen] = useState(false)
-	const breakpointTablet = 960
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const breakpointTablet = 960
 
-	console.log(windowWidth)
+  const handleToggle = () => {
+    function toggleMenu(prevMenuOpen) {
+      return !prevMenuOpen
+    }
 
-	const handleToggle = () => {
-		function toggleMenu(prevMenuOpen) {
-			return !prevMenuOpen
-		}
+    setMenuOpen(toggleMenu)
+  }
 
-		setMenuOpen(toggleMenu)
-	}
+  useGetWidth(setWindowWidth)
 
-	useGetWidth(setWindowWidth)
+  return (
+    <>
+      <header className='header'>
+        {windowWidth >= breakpointTablet && <Search />}
 
-	return (
-		<>
-			<header className='header'>
-				{windowWidth >= breakpointTablet && <Search />}
+        {windowWidth < breakpointTablet && (
+          <Toggle
+            open={menuOpen}
+            ariaLabel={'menu open'}
+            onClick={handleToggle}
+          />
+        )}
 
-				{windowWidth < breakpointTablet && (
-					<Toggle
-						open={menuOpen}
-						ariaLabel={'menu open'}
-						onClick={handleToggle}
-					/>
-				)}
+        {windowWidth < breakpointTablet && <Menu open={menuOpen} />}
 
-				{windowWidth < breakpointTablet && <Menu open={menuOpen} />}
+        {windowWidth < breakpointTablet && <Like />}
 
-				{windowWidth < breakpointTablet && <Like />}
+        {windowWidth < breakpointTablet && <Logo />}
 
-				{windowWidth < breakpointTablet && <Logo />}
+        {windowWidth < breakpointTablet && <SearchIcon />}
 
-				{windowWidth < breakpointTablet && <SearchIcon />}
+        <Cart tabIndex={0} />
 
-				<Cart tabIndex={0} />
-
-				{windowWidth >= breakpointTablet && (
-					<Button content={'Sign in'} selector={'button--red'} />
-				)}
-			</header>
-		</>
-	)
+        {windowWidth >= breakpointTablet && (
+          <Button content={'Sign in'} selector={'button--red'} />
+        )}
+      </header>
+    </>
+  )
 }
 
 export default Header
