@@ -1,0 +1,22 @@
+{
+  "singleQuote": true,
+  "semi": false,
+  "printWidth": 80,
+  "trailingComma": "es5",
+  "editor.formatOnSave": true,
+  "endOfLine": "auto",
+  "tabWidth": 2,
+  "jsxSingleQuote": true,
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "space-before-function-paren": true,
+  "overrides": [
+    {
+         "files": ["**/*.css", "**/*.scss"],
+        "options": {
+            "singleQuote": true,
+            "printWidth": 100
+        }
+    }
+    ]
+}

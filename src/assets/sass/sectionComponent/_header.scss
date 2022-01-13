@@ -4,17 +4,13 @@
 .header {
   padding: 1.875rem $padding-mobile;
 
+  background-color: $very-light-blue;
   display: grid;
   place-content: center;
   grid-template-columns: auto auto 1fr auto auto;
-  gap: 1.313rem;
+  gap: 2.188rem;
 
-  .logo-mobile {
-    justify-self: center;
-  }
-
-  &__item {
-    display: grid;
-    place-content: center;
+  @include query(lg) {
+    grid-template-columns: 1fr auto auto;
   }
 }
