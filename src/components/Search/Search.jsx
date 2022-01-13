@@ -7,7 +7,7 @@ function Search() {
       <input
         className='search-container__input'
         type='text'
-        placeholder={'Search store'}
+        placeholder='Search store'
       />
     </form>
   )
