@@ -14,7 +14,8 @@ a {
   text-decoration: none;
 }
 
-button {
+button,
+input {
   background: transparent;
   border: none;
 }
@@ -22,9 +23,4 @@ button {
 hr {
   margin: 0;
   border: none;
-}
-
-input {
-  border: none;
-  background: transparent;
 }
