@@ -1,12 +1,15 @@
-import LogoDesktop from '../../components/Icons/LogoDesktop'
+import LogoDesktop from '../../components/LogoDesktop/LogoDesktop'
 import Navbar from '../../components/Navbar/Navbar'
+import SocialNetwork from '../../components/SocialNetWork/SocialNetwork'
 
 function Sidebar() {
   return (
     <aside className='sidebar'>
-      <LogoDesktop></LogoDesktop>
-      <h1>Explore</h1>
+      <LogoDesktop />
+      <h1 className='sidebar__title'>Explore</h1>
+
       <Navbar></Navbar>
+      <SocialNetwork />
     </aside>
   )
 }

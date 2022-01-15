@@ -1,0 +1,12 @@
+.social {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    padding: 0.2rem;
+    display: grid;
+  }
+}

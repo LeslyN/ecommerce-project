@@ -2,8 +2,8 @@ import Link from '../Link/Link'
 
 function Navbar() {
   return (
-    <nav>
-      <ul>
+    <nav className='navbar'>
+      <ul className='navbar__list'>
         <Link name={'Home'}></Link>
         <Link name={'Clothing'}></Link>
         <Link name={'Shoes'}></Link>
