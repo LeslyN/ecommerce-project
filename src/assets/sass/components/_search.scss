@@ -10,6 +10,7 @@
 
   &__input {
     padding: 0.5rem 1rem 0.5rem 3rem;
+    border: 1px solid $dark-grayish-blue-2;
     &::placeholder {
       color: $dark-grayish-blue-2;
     }

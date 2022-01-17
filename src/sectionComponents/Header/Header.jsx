@@ -9,6 +9,7 @@ import Cart from '../../components/Icons/Cart'
 import Menu from '../../components/Menu/Menu'
 import Button from '../../components/Button/Button'
 import Search from '../../components/Search/Search'
+import button from "../../components/Button/Button";
 
 function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -28,7 +29,7 @@ function Header() {
   return (
     <>
       <header className='header'>
-        {windowWidth >= breakpointDesktop && <Search />}
+        {windowWidth >= breakpointDesktop && <button className="header__item"><Search /></button>}
 
         {windowWidth < breakpointDesktop && (
           <Toggle
@@ -40,13 +41,13 @@ function Header() {
 
         {windowWidth < breakpointDesktop && <Menu open={menuOpen} />}
 
-        {windowWidth < breakpointDesktop && <Like />}
+        {windowWidth < breakpointDesktop && <button className="header__item"><Like /></button>}
 
-        {windowWidth < breakpointDesktop && <Logo />}
+        {windowWidth < breakpointDesktop && <a href="" className="header__item"><Logo /></a>}
 
-        {windowWidth < breakpointDesktop && <SearchIcon />}
+        {windowWidth < breakpointDesktop && <button className="header__item"><SearchIcon /></button>}
 
-        <Cart tabIndex={0} />
+        <button className="header__item"><Cart tabIndex={0} /></button>
 
         {windowWidth >= breakpointDesktop && (
           <Button content={'Sign in'} selector={'button--red'} />
