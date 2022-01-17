@@ -1,7 +1,7 @@
 function Link(props) {
   return (
-    <li>
-      <a href=''>{props.name}</a>
+    <li className="navbar__item">
+      <a className="navbar__link" href=''>{props.name}</a>
     </li>
   )
 }

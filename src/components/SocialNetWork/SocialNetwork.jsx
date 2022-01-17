@@ -4,23 +4,25 @@ import Instagram from '../Icons/Instagram'
 
 function SocialNetwork() {
   return (
-    <ul>
-      <li>
-        <a href='#'>
-          <Facebook></Facebook>
-        </a>
-      </li>
-      <li>
-        <a href='#'>
-          <Twitter></Twitter>
-        </a>
-      </li>
-      <li>
-        <a href='#'>
-          <Instagram></Instagram>
-        </a>
-      </li>
-    </ul>
+    <nav className='social'>
+      <ul className='social__list'>
+        <li className='social__item'>
+          <a className='social__link' href='#' target='_blank'>
+            <Facebook></Facebook>
+          </a>
+        </li>
+        <li className='social__item'>
+          <a className='social__link' href='#' target='_blank'>
+            <Twitter></Twitter>
+          </a>
+        </li>
+        <li className='social__item'>
+          <a className='social__link' href='#' target='_blank'>
+            <Instagram></Instagram>
+          </a>
+        </li>
+      </ul>
+    </nav>
   )
 }
 

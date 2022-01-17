@@ -1,7 +1,7 @@
-function LogoDesktop() {
+function LogoDesktopIcon({ className }) {
   return (
     <svg
-      className='logo-desktop'
+      className={`${className}`}
       width='134'
       height='20'
       viewBox='0 0 134 20'
@@ -16,4 +16,4 @@ function LogoDesktop() {
   )
 }
 
-export default LogoDesktop
+export default LogoDesktopIcon

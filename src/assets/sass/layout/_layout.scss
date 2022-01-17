@@ -23,7 +23,7 @@
   grid-area: sidebar;
   display: none;
   @include query(lg) {
-    display: block;
+    display: grid;
   }
 }
 

@@ -1,6 +1,14 @@
 @use '../utils/variables' as *;
 
 .sidebar {
-  padding: 2rem;
+  padding: 3.688rem 2.75rem;
   background-color: $light-blue;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+
+  &__title {
+    margin: 4.75rem 0 2.5rem 0;
+  }
 }
