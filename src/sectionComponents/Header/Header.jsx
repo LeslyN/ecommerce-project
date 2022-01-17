@@ -13,7 +13,7 @@ import Search from '../../components/Search/Search'
 function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [menuOpen, setMenuOpen] = useState(false)
-  const breakpointTablet = 960
+  const breakpointDesktop = 960
 
   const handleToggle = () => {
     function toggleMenu(prevMenuOpen) {
@@ -28,9 +28,9 @@ function Header() {
   return (
     <>
       <header className='header'>
-        {windowWidth >= breakpointTablet && <Search />}
+        {windowWidth >= breakpointDesktop && <Search />}
 
-        {windowWidth < breakpointTablet && (
+        {windowWidth < breakpointDesktop && (
           <Toggle
             open={menuOpen}
             ariaLabel={'menu open'}
@@ -38,17 +38,17 @@ function Header() {
           />
         )}
 
-        {windowWidth < breakpointTablet && <Menu open={menuOpen} />}
+        {windowWidth < breakpointDesktop && <Menu open={menuOpen} />}
 
-        {windowWidth < breakpointTablet && <Like />}
+        {windowWidth < breakpointDesktop && <Like />}
 
-        {windowWidth < breakpointTablet && <Logo />}
+        {windowWidth < breakpointDesktop && <Logo />}
 
-        {windowWidth < breakpointTablet && <SearchIcon />}
+        {windowWidth < breakpointDesktop && <SearchIcon />}
 
         <Cart tabIndex={0} />
 
-        {windowWidth >= breakpointTablet && (
+        {windowWidth >= breakpointDesktop && (
           <Button content={'Sign in'} selector={'button--red'} />
         )}
       </header>
