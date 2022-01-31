@@ -1,0 +1,6 @@
+@use '../utils/variables' as *;
+
+.main {
+  background-color: $very-light-blue;
+  padding: 2rem 5vw;
+}

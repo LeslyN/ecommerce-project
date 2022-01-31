@@ -1,5 +1,6 @@
 import Sidebar from '../sectionComponents/Sidebar/Sidebar'
 import Header from '../sectionComponents/Header/Header'
+import HomeImages from '../components/HomeImages/HomeImages'
 
 function Home() {
   return (
@@ -7,7 +8,7 @@ function Home() {
       <Sidebar></Sidebar>
       <Header></Header>
       <main className="main">
-
+        <HomeImages/>
       </main>
     </div>
   )

@@ -1,0 +1,62 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.home-images {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  @include query(md) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      'getup50 getup50 headphone  watch'
+      'summer   summer headphone  watch'
+      '  boy     girl     shoe    shoe'
+      '  boy     girl   backpack backpack';
+
+    .getup50 {
+      grid-area: getup50;
+    }
+
+    .summer {
+      grid-area: summer;
+    }
+
+    .boy {
+      grid-area: boy;
+    }
+
+    .girl {
+      grid-area: girl;
+    }
+
+    .headphone {
+      grid-area: headphone;
+    }
+
+    .watch {
+      grid-area: watch;
+    }
+
+    .shoe {
+      grid-area: shoe;
+    }
+
+    .backpack {
+      grid-area: backpack;
+    }
+  }
+
+  &__item {
+    display: grid;
+    border-radius: 1rem;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+  }
+}
