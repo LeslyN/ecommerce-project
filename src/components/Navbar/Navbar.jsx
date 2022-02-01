@@ -1,14 +1,14 @@
-import Link from '../Link/Link'
+import LinkMenu from '../Link/LinkMenu'
 
 function Navbar() {
   return (
     <nav className='navbar'>
       <ul className='navbar__list'>
-        <Link name={'Home'}></Link>
-        <Link name={'Clothing'}></Link>
-        <Link name={'Shoes'}></Link>
-        <Link name={'Accesories'}></Link>
-        <Link name={'About us'}></Link>
+        <LinkMenu name={'Home'} route={'/'}></LinkMenu>
+        <LinkMenu name={'Clothing'} route={'/clothing'}></LinkMenu>
+        <LinkMenu name={'Shoes'} route={'/shoes'}></LinkMenu>
+        <LinkMenu name={'Accesories'} route={'/accesories'}></LinkMenu>
+        <LinkMenu name={'About us'} route={'/about-us'}></LinkMenu>
       </ul>
     </nav>
   )
